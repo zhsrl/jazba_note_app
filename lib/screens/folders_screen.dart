@@ -21,7 +21,7 @@ class _FoldersScreenState extends State<FoldersScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('folders',
+                    Text('jinaqtar',
                         style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 32,
@@ -51,7 +51,7 @@ class _FoldersScreenState extends State<FoldersScreen> {
           child: FittedBox(
             child: FloatingActionButton(
               onPressed: () {
-                ConstFuns().showSnack('FAB Pressed!', context);
+                ConstFuns().showSnack('FAB!', context);
               },
               backgroundColor: MainColors.redColor,
               elevation: 0,
