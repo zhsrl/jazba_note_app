@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jazba_app/screens/folders_screen.dart';
+import 'package:jazba_app/widgets/note_card_widget.dart';
 import 'consts.dart';
 
 void main() {

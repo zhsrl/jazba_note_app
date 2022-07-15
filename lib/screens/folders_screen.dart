@@ -13,36 +13,34 @@ class _FoldersScreenState extends State<FoldersScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(16, 20, 16, 0),
-            child: ListView(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text('jinaqtar',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 32,
-                            color: MainColors.whiteColor)),
-                    Icon(
-                      Icons.calendar_month,
-                      color: MainColors.whiteColor,
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 24,
-                ),
-                FolderWidget(notes_count: 41, note_title: 'personal notes'),
-                FolderWidget(notes_count: 259, note_title: 'about ui/ux'),
-                FolderWidget(notes_count: 13, note_title: 'daily tasks'),
-                FolderWidget(notes_count: 9, note_title: 'mathematic'),
-                FolderWidget(notes_count: 16, note_title: 'sound names'),
-                FolderWidget(notes_count: 61, note_title: 'others'),
-              ],
-            ),
+        body: Padding(
+          padding: const EdgeInsets.fromLTRB(16, 20, 16, 0),
+          child: ListView(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('jinaqtar',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 32,
+                          color: MainColors.whiteColor)),
+                  Icon(
+                    Icons.calendar_month,
+                    color: MainColors.whiteColor,
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 24,
+              ),
+              FolderWidget(notes_count: 41, note_title: 'personal notes'),
+              FolderWidget(notes_count: 259, note_title: 'about ui/ux'),
+              FolderWidget(notes_count: 13, note_title: 'daily tasks'),
+              FolderWidget(notes_count: 9, note_title: 'mathematic'),
+              FolderWidget(notes_count: 16, note_title: 'sound names'),
+              FolderWidget(notes_count: 61, note_title: 'others'),
+            ],
           ),
         ),
         floatingActionButton: SizedBox(
