@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:jazba_app/screens/notes_screen.dart';
-
 import '../consts.dart';
 
 // ignore: must_be_immutable

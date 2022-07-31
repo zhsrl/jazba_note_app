@@ -1,23 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
-class NotesStaggeredGridView extends StatelessWidget {
-  const NotesStaggeredGridView({Key? key}) : super(key: key);
+import '../models/note.dart';
+import 'note_item.dart';
+
+class NoteGridView extends StatelessWidget {
+  final notes = Note.generatedNotes();
 
   @override
   Widget build(BuildContext context) {
-    return GridView.count(
-      crossAxisCount: 4,
-      mainAxisSpacing: 4.0,
-      crossAxisSpacing: 4.0,
-      padding: const EdgeInsets.all(4.0),
+    return GridView.builder(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        crossAxisSpacing: 10.0,
+        mainAxisSpacing: 10.0,
+      ),
+      padding: EdgeInsets.all(0),
+      itemBuilder: (BuildContext context, int index) => NoteItem(notes[index]),
+      itemCount: notes.length,
     );
   }
-}
 
-List<StaggeredTile> _gridTemplate = const <StaggeredTile>[
-  StaggeredTile.count(2, 2),
-  StaggeredTile.count(2, 4),
-  StaggeredTile.count(2, 2),
-  StaggeredTile.count(1, 4)
-];
+  // @override
+  // Widget build(BuildContext context) {
+  //   return StaggeredGridView.countBuilder(
+  //     shrinkWrap: true,
+  //     physics: ScrollPhysics(),
+  //     crossAxisSpacing: 10.0,
+  //     mainAxisSpacing: 10.0,
+  //     crossAxisCount: 2,
+  //     itemCount: notes.length,
+  //     itemBuilder: (BuildContext context, int index) => NoteItem(notes[index]),
+  //     staggeredTileBuilder: (_) {
+  //       StaggeredTile.fit(2);
+  //     },
+  //   );
+  // }
+}
