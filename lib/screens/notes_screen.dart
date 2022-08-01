@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jazba_app/widgets/note_item.dart';
+import 'package:jazba_app/widgets/note_widget.dart';
 import 'package:jazba_app/widgets/notes_grid_view.dart';
 
 import '../consts.dart';
